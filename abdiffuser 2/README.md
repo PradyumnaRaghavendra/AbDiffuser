@@ -30,9 +30,7 @@ HER2 Binder Dataset: Contains CDR H3 mutants of Trastuzumab labeled as binders o
 
 🚀 Usage
 1. Data Preprocessing
-bash
-Copy
-Edit
+
 # Process OAS dataset
 python abdiffuser/scripts/preprocess_data.py \
   --mode oas \
@@ -47,9 +45,7 @@ python abdiffuser/scripts/preprocess_data.py \
   --her2_dir data/HER2 \
   --output_dir data/processed
 2. Training
-bash
-Copy
-Edit
+
 # Train on OAS dataset
 python abdiffuser/scripts/train_model.py \
   --mode oas \
@@ -57,21 +53,9 @@ python abdiffuser/scripts/train_model.py \
   --output_dir abdiffuser/experiments/checkpoints \
   --batch_size 4 \
   --num_epochs 10
-3. Generation
-bash
-Copy
-Edit
-# Generate antibody samples
-python abdiffuser/scripts/generate.py \
-  --checkpoint abdiffuser/experiments/checkpoints/best.pt \
-  --num_samples 5 \
-  --temperature_pos 1.0 \
-  --temperature_aa 0.8 \
-  --output_dir abdiffuser/experiments/outputs
+
 📂 Project Structure
-bash
-Copy
-Edit
+
 abdiffuser/
 ├── data/              # Data storage
 │   ├── OAS/           # Paired Observable Antibody Space dataset
